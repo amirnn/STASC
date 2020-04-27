@@ -1,13 +1,15 @@
 #pragma once
 
 #include <functional>
+#include <complex>
 #include "ODE.h"
 
 namespace SysFunc{
 using namespace STASC;
-constexpr std::complex<double> lambda1{2};
-constexpr std::complex<double> lambda2{-0.5};
-State initialStateOne {20,10};
+using namespace std::complex_literals;
+constexpr std::complex<double> lambda1(0,2);
+constexpr std::complex<double> lambda2(0,-0.5);
+State initialStateOne {.5,-1/3};
 State sysFuncOne(const State &state, double time)
 {
     State gradient(state.size());
