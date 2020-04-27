@@ -8,6 +8,8 @@ include_directories(${ARMADILLO_INCLUDE_DIRS})
 
 include_directories(include)
 
+add_library(ODE src/ODE.cc include/ODE.h)
 
-add_executable(assign1 src/main.cpp)
-target_link_libraries(assign1 ${ARMADILLO_LIBRARIES})
+
+add_executable(assign1 src/main.cc)
+target_link_libraries(assign1 ${ARMADILLO_LIBRARIES} ODE)
