@@ -2,13 +2,16 @@
 
 namespace STASC
 {
+
 /*
+* Constructor
 * params: parameter lambda, timeStep can be one single value or a vector of time points.
 */
 ODE::ODE(SystemFunction sysfunc, State initialState, std::vector<double> timeStepsVec) : systemFunction{sysfunc}, stateVector{initialState}, timeStepsVec{timeStepsVec}
 {
 }
 
+// Destructor
 ODE::~ODE()
 {
 }
@@ -22,6 +25,16 @@ inline State operator+(const State &first, const State &second)
     }
     return resultState;
 }
+
+
+inline State operator*(const State& first, double second){
+    State resultState;
+    for(const auto& elm: first){
+         resultState.push_back(elm * second);
+     }
+     return resultState;
+}
+
 State ODE::getStateVector()
 {
     return stateVector;

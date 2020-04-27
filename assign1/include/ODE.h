@@ -33,13 +33,4 @@ public:
 };
 
 
-
-inline State operator*(const State& first, double second){
-    State resultState;
-    for(const auto& elm: first){
-         resultState.push_back(elm * second);
-     }
-     return resultState;
-}
-
 } // namespace ODE
