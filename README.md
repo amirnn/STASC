@@ -11,4 +11,4 @@ ODE class takes a systemfunction as a fanctor and an initial state and a vector 
 To be able to compile and run the program one should have Boost libraries and gnuplot software package installed. CMake will take care of finding and linking the correct files by itself. 
 
 # Debug
-If you had any problems, suggestions you can reach me by [my email address](mailto::amir.nourinia@gmail.com) or you can raise an issue. :)
+If you had any problems or any suggestions you can reach me by [my email address](mailto::amir.nourinia@gmail.com) or you can raise an issue. :)
