@@ -20,7 +20,7 @@ private:
     State stateVector; // initilizes with the initial state and then always holds latest state
     std::vector<double> timeStepsVec;
     size_t currentTimeIndex{0};
-    double time{0}; // The universal time.
+    double time{0}; // The universal time. TODO: Can be unitless.
     SystemFunction systemFunction;
 
 public:

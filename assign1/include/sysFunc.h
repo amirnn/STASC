@@ -21,8 +21,10 @@ State sysFuncOne(const State &state, double time)
 State sysFuncTwo(const State &state, double time)
 {
 
-    State nextState;
-    return nextState;
+    State gradient(state.size());
+    gradient[0] = lambda1 * state[0];
+    gradient[1] = lambda2 * state[1];
+    return gradient;
 }
 }
 // end of namespace SysFunc
